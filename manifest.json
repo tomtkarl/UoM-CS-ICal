@@ -1,0 +1,14 @@
+{
+  "manifest_version": 2,
+  "name": "UoM Computer Science Timetable iCal Helper",
+  "description": "An extension which adds an iCal export option to timetables on the cs.manchester.ac.uk site.\nSimply click the icons next to the lectures/labs you're attending, then click \"Save to Disk\". The downloaded `ical.ics` can be imported into any calendar application.",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["http://www.cs.manchester.ac.uk/ugt/timetable/*", "http://www.cs.manchester.ac.uk/undergraduate/timetable/*"],
+      "js": ["contentscript.js"],
+      "css": ["jquery.icalendar.css"]
+    }
+  ],
+  "web_accessible_resources": ["contentscript.js", "addical.js", "jquery.min.js", "jquery.icalendar.js", "downloadify.min.js", "swfobject.js", "jquery-ui.js"]
+}
